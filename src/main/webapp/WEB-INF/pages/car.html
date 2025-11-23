@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <link rel="stylesheet" th:href="@{/static/css/main.css}"/>
+    <meta http-equiv="refresh" content="0 url=/cars-init" th:if="${#lists.isEmpty(cars)}"></meta>
+</head>
+<body>
+<div id="main-wrapper">
+    <table>
+        <caption><h2>Cars Controller</h2></caption>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Manufacturer</th>
+            <th>Model</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="car : ${cars}">
+            <td data-label="ID" th:text="${car.id}"></td>
+            <td data-label="Manufacturer" th:text="${car.manufacturer}"></td>
+            <td data-label="Model" th:text="${car.model}"></td>
+            <td data-label="Year" th:text="${car.year}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
