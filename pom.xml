@@ -15,6 +15,7 @@
         <thymeleaf.version>3.1.3.RELEASE</thymeleaf.version>
         <jakarta.persistence.version>3.1.0</jakarta.persistence.version>
         <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
+        <jakarta.annotaton.version>2.1.1</jakarta.annotaton.version>
         <hibernate.version>6.4.0.Final</hibernate.version>
         <mysql.version>9.5.0</mysql.version>
     </properties>
@@ -44,6 +45,11 @@
             <artifactId>jakarta.servlet-api</artifactId>
             <version>${jakarta.servlet.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <version>${jakarta.annotaton.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate.orm</groupId>

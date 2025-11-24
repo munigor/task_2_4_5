@@ -22,16 +22,6 @@ public class CarController {
         return "car";
     }
 
-    @GetMapping(path = "/cars-init")
-    public String init(Model model) {
-        carService.add(new Car("Hyundai", "PALISADE", 2025));
-        carService.add(new Car("Hyundai", "IONIQ5", 2025));
-        carService.add(new Car("Hyundai", "GRANDEUR", 2025));
-        carService.add(new Car("Hyundai", "SONATA", 2025));
-        carService.add(new Car("KIA", "K5", 2025));
-        return "redirect:/cars";
-    }
-
     private Integer getLimit(String count) {
         int MAX_CAR_LIMIT = 50;
         try {
